@@ -18,7 +18,7 @@ app.use(express.json({extended:true}));
 
 // ahora necesitamos asignar un PUERTO a nuestro servidor express
 
-const port = process.env.port || 4000; // aqui lo que hace es si encuentra un puerto asigado en el .env usalo si no usa el 4000
+const PORT = process.env.PORT || 4000; // aqui lo que hace es si encuentra un puerto asigado en el .env usalo si no usa el 4000
 
 
 // importar rutas 
@@ -39,8 +39,8 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 //ahora que ya tenemos nuestro puerto asignado pasamos a ejecutar el servidor express
 
-app.listen(port, '0.0.0.0', ()=>{
+app.listen(PORT, '0.0.0.0', ()=>{
 
-    console.log(`Bienvenido, se encuentra ejecutando el servidor en el puerto: ${port}`);
+    console.log(`Bienvenido, se encuentra ejecutando el servidor en el puerto: ${PORT}`);
 
 });
